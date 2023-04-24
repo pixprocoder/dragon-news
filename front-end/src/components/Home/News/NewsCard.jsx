@@ -5,6 +5,7 @@ import { BsEyeFill } from "react-icons/bs";
 
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   console.log(news);
@@ -44,8 +45,18 @@ const NewsCard = ({ news }) => {
             <h2>{title}</h2>
           </Card.Title>
           <Image className="my-4" src={image_url} fluid />
-          <Card.Text>{details}</Card.Text>
-          <span className="btn btn-link  m-0 p-0">Read more</span>
+          <Card.Text>
+            {details.length < 250 ? (
+              <>{details}</>
+            ) : (
+              <>
+                {details.slice(0, 250)}...{" "}
+                <Link className="btn btn-link  m-0 p-0" to={`/home`}>
+                  Read More
+                </Link>{" "}
+              </>
+            )}
+          </Card.Text>
         </Card.Body>
         <Card.Footer className="d-flex justify-content-between text-muted">
           <div className="d-flex justify-content-center align-items-center gap-2">
