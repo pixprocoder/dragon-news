@@ -1,7 +1,7 @@
 const SideNav = () => {
   return (
     <div>
-      <h1>side nav</h1>
+      <h1>Right side nav</h1>
     </div>
   );
 };

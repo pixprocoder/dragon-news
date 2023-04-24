@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Categories from "../Categories/Categories";
+import AllNews from "../News/AllNews";
+import SideNav from "../SideNav/SideNav";
 
 const Home = () => {
   return (
@@ -13,9 +15,11 @@ const Home = () => {
             <Categories />
           </Col>
           <Col lg={6}>
-            <h1>Middle</h1>
+            <AllNews />
           </Col>
-          <Col lg={3}>Right</Col>
+          <Col lg={3}>
+            <SideNav />
+          </Col>
         </Row>
       </Container>
     </section>
