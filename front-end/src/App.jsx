@@ -1,9 +1,10 @@
-import { Button } from "react-bootstrap";
+// components
+import { Header } from "./components/shared/header/Header";
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-center text-primary">Hello world</h1>
-      <Button>ADD</Button>
+    <div className="container mx-auto">
+      <Header />
     </div>
   );
 };
