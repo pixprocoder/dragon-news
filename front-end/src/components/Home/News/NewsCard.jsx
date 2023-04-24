@@ -3,9 +3,19 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
 
-const NewsCard = () => {
+const NewsCard = ({ news }) => {
+  console.log(news);
+  const {
+    title,
+    image_url,
+    total_view,
+    details,
+    author,
+    rating,
+    thumbnail_url,
+  } = news;
   return (
-    <div>
+    <div className="mb-4">
       <Card>
         <Card.Header>
           <div className="d-flex justify-content-between">
@@ -14,14 +24,12 @@ const NewsCard = () => {
           </div>
         </Card.Header>
         <Card.Body>
-          <Card.Title>Special title treatment</Card.Title>
-          {/* <Image src="holder.js/100px250" fluid />; */}
-          <h1>Images</h1>
-          <Card.Text>
-            With supporting text below as a natural lead-in to additional
-            content.
-          </Card.Text>
-          <span className="btn btn-link">Go somewhere</span>
+          <Card.Title>
+            <h2>{title}</h2>
+          </Card.Title>
+          <Image className="my-4" src={image_url} fluid />
+          <Card.Text>{details}</Card.Text>
+          <span className="btn btn-link  m-0 p-0">Read more</span>
         </Card.Body>
         <Card.Footer className="d-flex justify-content-between text-muted">
           <div>rating</div>
