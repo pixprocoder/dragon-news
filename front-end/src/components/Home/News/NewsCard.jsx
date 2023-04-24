@@ -1,4 +1,5 @@
 import React from "react";
+import { CiBookmark, CiShare2 } from "react-icons/ci";
 
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
@@ -18,9 +19,22 @@ const NewsCard = ({ news }) => {
     <div className="mb-4">
       <Card>
         <Card.Header>
-          <div className="d-flex justify-content-between">
-            <div>img</div>
-            <div>Icons</div>
+          <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex">
+              <Image
+                style={{ width: "50px", height: "50px" }}
+                src={author.img}
+                roundedCircle
+              />
+              <div className="ms-3">
+                <h5 className="mb-0">{author.name}</h5>
+                <p className="m-0">{author.published_date}</p>
+              </div>
+            </div>
+            <div>
+              <CiBookmark style={{ fontSize: "28px" }} />
+              <CiShare2 style={{ fontSize: "28px" }} />
+            </div>
           </div>
         </Card.Header>
         <Card.Body>
