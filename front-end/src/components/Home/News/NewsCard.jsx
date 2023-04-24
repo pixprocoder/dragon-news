@@ -1,5 +1,7 @@
 import React from "react";
 import { CiBookmark, CiShare2 } from "react-icons/ci";
+import { AiFillStar } from "react-icons/ai";
+import { BsEyeFill } from "react-icons/bs";
 
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
@@ -46,8 +48,20 @@ const NewsCard = ({ news }) => {
           <span className="btn btn-link  m-0 p-0">Read more</span>
         </Card.Body>
         <Card.Footer className="d-flex justify-content-between text-muted">
-          <div>rating</div>
-          <div> views</div>
+          <div className="d-flex justify-content-center align-items-center gap-2">
+            <div>
+              <AiFillStar style={{ color: "goldenrod" }} />
+              <AiFillStar style={{ color: "goldenrod" }} />
+              <AiFillStar style={{ color: "goldenrod" }} />
+              <AiFillStar style={{ color: "goldenrod" }} />
+              <AiFillStar style={{ color: "goldenrod" }} />
+            </div>
+            <span className="ms-2">{rating.number}</span>
+          </div>
+          <div className="d-flex justify-content-center align-items-center gap-2">
+            <BsEyeFill />
+            <span>{total_view}</span>
+          </div>
         </Card.Footer>
       </Card>
     </div>
