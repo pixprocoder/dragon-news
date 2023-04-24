@@ -4,6 +4,7 @@ import { FaUserCircle } from "react-icons/fa";
 // Bootstrap
 import Button from "react-bootstrap/Button";
 import logo from "../../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -23,15 +24,15 @@ export const Header = () => {
       </div>
       <nav className="mt-2 d-flex justify-content-between">
         <div className="flex-grow-1 text-center">
-          <span className="ms-2" href="">
+          <Link to="/" className="ms-2">
             Home
-          </span>
-          <span className="ms-2" href="">
+          </Link>
+          <Link to="/about" className="ms-2">
             About
-          </span>
-          <span className="ms-2" href="">
+          </Link>
+          <Link to="/carrier" className="ms-2">
             Carrier
-          </span>
+          </Link>
         </div>
         <div>
           <FaUserCircle
