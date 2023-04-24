@@ -1,10 +1,13 @@
+// From react
+import { Link } from "react-router-dom";
+
 // React Icons
 import { FaUserCircle } from "react-icons/fa";
-
 // Bootstrap
 import Button from "react-bootstrap/Button";
+
+// assets and components
 import logo from "../../../assets/logo.png";
-import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -22,15 +25,15 @@ export const Header = () => {
           Highlights: Germany vs Spain as...
         </p>
       </div>
-      <nav className="mt-2 d-flex justify-content-between">
+      <nav className="my-5 d-flex justify-content-between">
         <div className="flex-grow-1 text-center">
-          <Link to="/" className="ms-2">
+          <Link to="/" className="ms-2 btn btn-link-secondary border">
             Home
           </Link>
-          <Link to="/about" className="ms-2">
+          <Link to="/about" className="ms-2 btn btn-link-secondary border">
             About
           </Link>
-          <Link to="/carrier" className="ms-2">
+          <Link to="/carrier" className="ms-2 btn btn-link-secondary border">
             Carrier
           </Link>
         </div>
