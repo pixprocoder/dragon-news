@@ -42,7 +42,7 @@ const NewsCard = ({ news }) => {
         </Card.Header>
         <Card.Body>
           <Card.Title>
-            <h2>{title}</h2>
+            <h2 className="fw-bold">{title}</h2>
           </Card.Title>
           <Image className="my-4" src={image_url} fluid />
           <Card.Text>
