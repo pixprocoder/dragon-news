@@ -1,5 +1,9 @@
-import logo from "../../../assets/logo.png";
+// React Icons
+import { FaUserCircle } from "react-icons/fa";
+
+// Bootstrap
 import Button from "react-bootstrap/Button";
+import logo from "../../../assets/logo.png";
 
 export const Header = () => {
   return (
@@ -30,7 +34,10 @@ export const Header = () => {
           </span>
         </div>
         <div>
-          <Button variant="danger">Latest</Button>
+          <FaUserCircle
+            style={{ fontSize: "30px", marginRight: "10px" }}
+          ></FaUserCircle>
+          <Button variant="dark">Login</Button>
         </div>
       </nav>
     </header>
