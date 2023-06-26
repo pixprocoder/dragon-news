@@ -1,11 +1,13 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const Category = ({ category }) => {
   return (
     <div>
-      <Link className="btn btn-link">{category.name}</Link>
+      <Link to={`/category`} className="btn btn-link">
+        {category.name}
+      </Link>
+      {/* <span>{news?.length}</span> */}
     </div>
   );
 };

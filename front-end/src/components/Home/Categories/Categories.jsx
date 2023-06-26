@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Category from "./Category/Category";
+import { useLoaderData } from "react-router-dom";
 
 const Categories = () => {
-  const [catagories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/categories")
@@ -14,7 +15,7 @@ const Categories = () => {
     <div>
       <h3>All Category</h3>
       <div>
-        {catagories.map((category) => (
+        {categories.map((category) => (
           <Category key={category.id} category={category} />
         ))}
       </div>

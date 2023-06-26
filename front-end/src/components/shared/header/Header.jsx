@@ -8,8 +8,12 @@ import Button from "react-bootstrap/Button";
 
 // assets and components
 import logo from "../../../assets/logo.png";
+import { useContext } from "react";
+import { userContext } from "../../../contextAPI/AuthContext/AuthContext";
 
 export const Header = () => {
+  const { user } = useContext(userContext);
+  console.log(user);
   return (
     <header className="text-center">
       <div>
@@ -41,7 +45,9 @@ export const Header = () => {
           <FaUserCircle
             style={{ fontSize: "30px", marginRight: "10px" }}
           ></FaUserCircle>
-          <Button variant="dark">Login</Button>
+          <Link to="/login" variant="dark">
+            Login
+          </Link>
         </div>
       </nav>
     </header>

@@ -8,7 +8,6 @@ import Image from "react-bootstrap/Image";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
-  console.log(news);
   const {
     title,
     image_url,
